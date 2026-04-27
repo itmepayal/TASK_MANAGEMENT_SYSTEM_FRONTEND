@@ -111,7 +111,7 @@ export const useTaskController = () => {
     try {
       setSubmitLoading(true);
 
-      await updateTask(selectedTask._id, {
+      await updateTask(selectedTask._id!, {
         text: formData.title,
         priority: formData.priority,
       });
@@ -151,7 +151,7 @@ export const useTaskController = () => {
 
     try {
       setDeleteLoading(true);
-      await deleteTask(selectedTask._id);
+      await deleteTask(selectedTask._id!);
       setShowDeleteModal(false);
       setSelectedTask(null);
       await refetch();
@@ -184,7 +184,7 @@ export const useTaskController = () => {
    * =========================================================
    */
   const handleToggle = async (task: Task) => {
-    await toggleTask(task._id);
+    await toggleTask(task._id!);
   };
 
   /**
