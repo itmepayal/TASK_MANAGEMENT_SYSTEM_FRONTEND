@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: "Saira", system-ui, sans-serif !important;
+}
